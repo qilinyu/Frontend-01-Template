@@ -1,1 +1,102 @@
-# 每周总结可以写在这里
+# 第二周（借鉴他人的）
+
+## 编程语言通识
+### 了解了形式语言喝非形式语言
+  - 非形式语言：中文、英文
+  - 形式语言（乔姆斯基谱系）
+    - 0型 无限制文法
+    - 1型 上下文相关文法
+    - 2型 上下文无关文法
+    - 3型 正则文法
+### 产生式（BNF）
+  - 介绍
+    - 能严格地表示语法规则，而且所描述的语法是与上下文无关的
+    - BNF 规定是推导规则(产生式)的集合，写为：<符号> ::= <使用符号的表达式>
+  - 规则
+    - 用尖括号括起来的名称来表示语法结构名
+    - 语法结构分成基础结构和需要用其他语法结构定义的复用结构
+      - 基础结构称终结符
+      - 复合结构称非终结符
+    - 引号和中间的字符表示终结符
+    - 可以有括号
+    - *表示重复多次
+    - | 表示或
+    - +表示至少一次
+### 图灵完备性
+  - 命令式 - 图灵机
+    - goto
+    - if和while
+  - 声明式 -- lambda
+    - 递归
+### 类型系统
+  - 动态类型系统与静态类型系统
+  - 强类型与弱类型
+    - 强类型：没有隐式转换
+    - 弱类型：有隐式转换
+  - 复合类型
+    - 结构图
+    - 函数签名
+  - 子类型
+   - 逆变/协变
+### 一般命令式编程语言
+ - Atom
+   - Identifier
+   - Literal
+ - Expression
+   - Atom
+   - Operator
+   - Punctuator
+ - Statement
+   - Expression
+   - Keyword
+   - Punctuator
+ - Structure
+   - Function
+   - Class
+   - Process
+   - Namespace
+ - Programe
+   - Program
+   - Mould
+   - Package
+   - Library
+### JavaScript 词法
+- whiteSpace
+   - \<TAB\>：`\t`
+   - \<VT\>： `\v`
+   - \<FF\>：`\f` 
+   - \<SP\>：`\s`
+   - \<NBSP\>：NO-BREAK SPACE
+   - \<ZWNBSP\>：ZERO WIDTH NO-BREAK SPACE
+   - \<USP\>
+- LineTerminator 换行符
+   - \<LF\>：`\n`
+   - \<CR\>：`\r`
+   - \<LS\>
+   - \<PS\>
+- Comment 注释
+   - // comment
+   - /* comment */
+- Token 一切有效东西的最小单元
+  - Punctuator: 符号 比如 `> = < }`
+  - Keywords：不能用作变量名，但像 getter 里的 `get`就是个例外
+  - Literal: 直接量
+    - Number
+      - 存储 Uint8Array、Float64Array
+      - 各种进制的写法
+        - 二进制 0b
+        - 八进制 0o
+        - 十进制 0x
+    - String
+      - Character
+      - Code Point
+      - Encoding
+        - [unicode](https://www.fileformat.info/info/unicode/index.htm) 编码 - utf
+          - utf-8 可变长度 （控制位的用处）
+      - Grammar
+        - `''`、`""`、``` `
+    - Boolean
+      - `true`
+      - `false`
+    - Null
+    - Undefind
